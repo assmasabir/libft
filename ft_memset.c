@@ -6,7 +6,7 @@
 /*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:34:55 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/03 16:30:20 by techwhimsy       ###   ########.fr       */
+/*   Updated: 2023/11/04 19:50:40 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void *ft_memset(void *ptr, int value, size_t size )
 		((char *)ptr)[i] = (char)value;
 		i++;
 	}
-	return ((char*)ptr);
+	return (ptr);
 }
 int main()
 {
