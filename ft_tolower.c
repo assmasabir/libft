@@ -1,5 +1,9 @@
-#include <string.h>
-void *memchr(const void *s, int c, size_t n)
+int ft_toloweer(int c)
 {
-    
+    if (c >= 65 && c <= 90)
+    {
+        c+=32;
+        return (c);
+    }
+    return (c);
 }
