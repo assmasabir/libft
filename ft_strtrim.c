@@ -11,7 +11,7 @@ int ft_strlen(char *str)
     }
     return i;
 }
-int search(char const c, char  const *str)
+static int search(char const c, char  const *str)
 {
     int i;
     
@@ -24,19 +24,7 @@ int search(char const c, char  const *str)
     }
     return (0);
 }
-int rsearch(char const c, char  const *str)
-{
-    int i;
-    
-    i = ft_strlen((char*)str) -1;
-    while (i >= 0)
-    {
-        if (str[i] == c)
-        return (1);
-        i--;
-    }
-    return (0);
-}
+
 char *ft_strtrim(char const *s1, char const *set)
 {
     int i;
@@ -51,11 +39,11 @@ char *ft_strtrim(char const *s1, char const *set)
     {
         i++;        
     }
-    while (j>= 0 && rsearch(s1[j], set))
+    while (j>= 0 && search(s1[j], set))
     {
         j--;
     }
-    res = (char *)malloc((j-i+1)*sizeof(char));
+    res = (char *)malloc(ft_strlen((char*)s1)*sizeof(char));
     if (!res)
     {
         return (NULL);
@@ -71,8 +59,8 @@ char *ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int main()
 {
-    const char st[] = "aaaaaaaaaa";
-    const char this[] = "eham";
+    const char st[] = "";
+    const char this[] = "aehri";
     char *res;
     res = ft_strtrim(st, this);
 
