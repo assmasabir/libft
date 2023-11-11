@@ -43,7 +43,7 @@ char *ft_strtrim(char const *s1, char const *set)
     {
         j--;
     }
-    res = (char *)malloc(ft_strlen((char*)s1)*sizeof(char));
+    res = (char *)malloc((ft_strlen((char*)s1)+1)*sizeof(char));
     if (!res)
     {
         return (NULL);
@@ -54,6 +54,7 @@ char *ft_strtrim(char const *s1, char const *set)
         i++;
         index++;
     }
+    res[index] = '\0';
     return (res);
 }
 #include <stdio.h>

@@ -25,3 +25,4 @@ void *ft_calloc(size_t nmemb, size_t size)
     ft_bzero(str, total_size);
     return (str);
 }
+
