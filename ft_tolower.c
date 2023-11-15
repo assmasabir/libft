@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int ft_toloweer(int c)
 {
     if (c >= 65 && c <= 90)

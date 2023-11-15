@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
+
 static unsigned int	ft_size(int nb)
 {
 	unsigned int	len;
@@ -16,19 +16,6 @@ static unsigned int	ft_size(int nb)
 	}
 	return (len);
 }
-int ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
-
 
 char *ft_itoa(int n)
 {
@@ -72,19 +59,4 @@ char *ft_itoa(int n)
     res[length] ='\0';
 
     return (res);
-}
-
-int main(void)
-{
-    int number = 1234567;  
-
-    char *result = ft_itoa(number);
-
-    printf("Integer: %d\n", number);
-    printf("String: %s\n", result);
-
- 
-    free(result);
-
-    return 0;
 }

@@ -1,16 +1,5 @@
-#include <stdlib.h>
-int ft_strlen(char *str)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
 static int search(char const c, char  const *str)
 {
     int i;
@@ -57,21 +46,6 @@ char *ft_strtrim(char const *s1, char const *set)
     res[index] = '\0';
     return (res);
 }
-#include <stdio.h>
-int main()
-{
-    const char st[] = "";
-    const char this[] = "aehri";
-    char *res;
-    res = ft_strtrim(st, this);
-
- 
-        printf("%s\n", res);
-        free(res); 
-    return 0;
-}
-
-
 
 
 

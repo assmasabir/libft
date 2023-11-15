@@ -1,17 +1,4 @@
-
-    #include <stdlib.h>
-int ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -46,13 +33,4 @@ char *ft_strjoin(char const *s1, char const *s2)
     }
     res[i] = '\0';
     return (res);
-}
-#include <stdio.h>
-int main ()
-{
-    char const ch1 []= "hello hello ";
-    char const ch2 []= "world";
-    char *res = ft_strjoin(ch1, ch2);
-    for (int i =0; res[i]!= '\0'; i++)
-    printf("%c",  res[i]);
 }

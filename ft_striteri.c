@@ -1,6 +1,6 @@
+#include "libft.h"
 
-
-void fc(unsigned int i, char* ch)
+static void fc(unsigned int i, char* ch)
 {
     if (i%2 == 0 && ch[i] != '\0') 
     {

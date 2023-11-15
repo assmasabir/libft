@@ -1,4 +1,5 @@
-#include <string.h>
+
+#include "libft.h"
 void ft_bzero(void *s, size_t n)
 {
     unsigned char *p;
@@ -10,18 +11,4 @@ void ft_bzero(void *s, size_t n)
     {
         p[i++] = '0';
     }
-}
-#include <stdio.h>
-int main() {
-    char str[] = "Hello, world!";
-   
-
-    printf("Original String: %s\n", str);
-
-    // Set the first 5 characters to 0 using ft_bzero
-    ft_bzero(str, sizeof(str));
-
-    printf("After ft_bzero: %s\n", str);
-
-    return 0;
 }
