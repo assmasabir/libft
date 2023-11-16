@@ -8,9 +8,9 @@
 	{
 		return (0);
 	}
-    while ((char )s1[i] != '\0' && s2[i] != '\0' && i < n)
+    while ((char)s1[i] != '\0' && (char)s2[i] != '\0' && i < n)
 	{
-		if (s1[i] == s2[i])
+		if (char)s1[i] == (char)s2[i])
 		{
 			i++;
 		}

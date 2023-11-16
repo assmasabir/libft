@@ -4,6 +4,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+}   t_list;
+
 void ft_bzero(void *s, size_t n);
 void *ft_calloc(size_t nmemb, size_t size);
 int ft_isalnum(int c);
@@ -37,5 +43,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_toloweer(int c);
 int ft_toupper(int c);
 int ft_atoi(const char* str);
+t_list *ft_lstnew(void *content);
 
 #endif
