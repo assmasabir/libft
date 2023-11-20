@@ -1,3 +1,5 @@
+#include "libft.h"
+
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	i;
@@ -9,9 +11,13 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	sized = ft_strlen(dest);
 	sizes = ft_strlen(src);
 	j = sized;
-	if (!size || size <= sized)
+    if(size == 0)
+    {
+        return (sizes);
+    }
+	if (size <= sized)
 	{
-		return (sized + size);
+		return (sizes + size);
 	}
 	while (i < size - sized - 1 && src[i] != '\0')
 	{
