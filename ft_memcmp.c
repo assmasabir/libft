@@ -13,8 +13,7 @@
 	{
 		return (0);
 	}
-
-    while (ch1[i] && ch2[i] && i < n)
+    while (i < n)
 	{
 		if (ch1[i] == ch2[i])
 		{
