@@ -6,8 +6,9 @@
 	unsigned char *ch2;
     size_t i;
 
-	ch1 = (unsigned char)s1;
-	ch2 = (unsigned char)s2;
+	ch1 = (unsigned char*)s1;
+	ch2 = (unsigned char*)s2;
+	i = 0;
 
     if (n == 0)
 	{
@@ -19,7 +20,11 @@
 		{
 			i++;
 		}
+		else
+        {
+            return ch1[i] - ch2[i];
+        }
 	}
-	return (ch1[i] - ch2[i]);
+	return (0);
 }
 

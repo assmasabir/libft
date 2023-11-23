@@ -2,10 +2,10 @@
 
 char *ft_strchr(const char *s, int c)
 {
-    int i;
-    
+    unsigned int i;
+
     i = 0;
-     if (c == '\0')
+    if (c == '\0')
     {
         while (s[i] != '\0')
         {
@@ -13,13 +13,13 @@ char *ft_strchr(const char *s, int c)
         }
         return (char *)(s + i);
     }
+    
     while (s[i] != '\0')
     {
-        if (s[i] == (char)c)
+        if (s[i] == c)
         return ((char* )(s+i));
         i++;
     }
-    return (NULL);
+    return (0);
+
 }
-
-
