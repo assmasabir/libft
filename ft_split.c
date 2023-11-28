@@ -1,66 +1,105 @@
 #include "libft.h"
+#include <string.h>
 
-char **ft_split(char const *s, char c)
-{
-	char **res;
-	int i;
-	int j;
-	int n;
-	
+static int number_of_strings(const char *str, char c) {
+    int i = 0;
+    int len = 0;
 
-	i = 0;
-	j = 0;
-	n = 0;
-	res = (char **)malloc((ft_strlen((char*)s)+1)*sizeof(char*));
-	if (!res)
+    if (!str)
+        return 0;
+
+    while (str[i] != '\0') {
+        while (str[i] == c)
+            i++;
+
+        if (str[i] && str[i] != c)
+            len++;
+
+        while (str[i] && str[i] != c)
+            i++;
+    }
+
+    return len;
+}
+
+static char *ft_strndup(const char *str, int n) {
+    int j = 0;
+    char *dest;
+
+    if (str == NULL)
+        return NULL;
+
+    dest = (char *)malloc(sizeof(char) * (n + 1));
+    if (!dest)
+        return NULL;
+
+    while (str[j] != '\0' && j < n) {
+        dest[j] = str[j];
+        j++;
+    }
+
+    dest[j] = '\0';
+    return dest;
+}
+
+static void freeTab(char **tab) {
+    int i = 0;
+    while (tab[i] != NULL) {
+        free(tab[i]);
+        i++;
+    }
+    free(tab);
+}
+
+char **ft_split(const char *s, char c) {
+    char **res;
+    int i = 0;
+    int j = 0;
+    int n = number_of_strings(s, c);
+
+    res = (char **)malloc((n + 1) * sizeof(char *));
+    if (!res)
+        return NULL;
+    while (s[j] != '\0')
 	{
-		return (0);
-	}
-	while (s[j] != '\0')
-	{
-		
-		if (s[j]!=c)
+        while (s[j] == c)
+            j++;
+        if (s[j])
 		{
-			res[i] = (char *)malloc(n + 1);
-			if (!res[i])
+            int len = 0;
+            while (s[j + len] && s[j + len] != c)
+                len++;
+            res[i] = ft_strndup(s + j, len);
+            if (!res[i]) 
 			{
-				while (i >= 0)
-				{
-					free(res[i]);
-					i--;
-				}
-                return (NULL);
-			}
-            while (s[j] != '\0' && s[j] != c) {
-                res[i][n] = s[j];
-                j++;
-                n++;
+                freeTab(res);
+                return NULL;
             }
-			res[i][n] = '\0';
-			i++;
-			n = 0;
-		}
-		j++;
-	}
-    res[i] = NULL;
-	return (res);                                                            
-}
-#include <stdio.h>
-int main ()
-{
-	int i, j;
-	char*  ch1 = "hellocicamcassma";
-	char**  ch2 ;
-	ch2 = ft_split(ch1,'c');
-	for (i = 0; ch2[i]!= NULL; i++) {
-        for (j = 0; ch2[i][j] != '\0'; j++) {
-            printf("%c\t", ch2[i][j]);
+            i++;
+            j += len;
         }
-        printf("\n");
     }
-	for (i = 0; ch2[i] != NULL; i++) {
-        free(ch2[i]);
-    }
-    free(ch2);
-	return (0);
+
+    res[i] = NULL;
+    return res;
 }
+
+// #include <stdio.h>
+// int main ()
+// {
+// 	int i, j;
+// 	char*  ch1 = "hello i am assma";
+// 	char**  ch2 ;
+// 	ch2 = split(ch1,' ');
+// 	for (i = 0; ch2[i]!= NULL; i++) {
+// 		for (j = 0; ch2[i][j] != '\0'; j++) {
+// 			printf("%c", ch2[i][j]);
+// 		}
+// 		printf("\n");
+// 	}
+// 	for (i = 0; ch2[i] != NULL; i++) {
+// 		free(ch2[i]);
+// 	}
+// 	free(ch2);
+// 	return (0);
+// }

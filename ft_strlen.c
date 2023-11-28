@@ -1,14 +1,14 @@
 #include "libft.h"
 
-int ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
-    int i;
+	int i;
 
-    i = 0;
+	i = 0;
 
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

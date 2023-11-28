@@ -1,44 +1,36 @@
 #include "libft.h"
 
-static void fc(unsigned int i, char* ch)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    if (i%2 == 0 && ch[i] != '\0') 
-    {
-        ch[i] = 'c';
-    }
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-    unsigned int i;
+// #include<stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// int main()
+// {
+//     char ch[] = "hello iam assma";
+//     char *result = malloc(sizeof(ch));
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-        i++;
-    }
+//     if (result == NULL)
+//     {
+//         fprintf(stderr, "Memory allocation failed\n");
+//         return (1);
+//     }
 
-}
-#include<stdio.h>
-#include <stdlib.h>
-#include <string.h>
-int main()
-{
-    char ch[] = "hello iam assma";
-    char *result = malloc(sizeof(ch)); 
+//     strcpy(result, ch);
 
-    if (result == NULL)
-    {
-        fprintf(stderr, "Memory allocation failed\n");
-        return 1;
-    }
+//     ft_striteri(result, fc);
+//     printf("%s\n", result);
 
-    strcpy(result, ch); 
+//     free(result);
 
-    ft_striteri(result, fc);
-    printf("%s\n", result);
-
-    free(result); 
-
-    return 0;
-}
+//     return (0);
+// }

@@ -2,12 +2,16 @@
 
 char	*ft_strdup(char *src)
 {
-	int		i;
-	int		j;
-	char	*dest;
+	int i;
+	int j;
+	char *dest;
 
 	j = 0;
 	i = 0;
+	if (src == NULL)
+	{
+		return (NULL);
+	}
 	while (src[i] != '\0')
 	{
 		i++;

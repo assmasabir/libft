@@ -1,9 +1,9 @@
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	int				j;
+	size_t i;
+	int j;
 
 	i = 0;
 	j = 0;
