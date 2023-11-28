@@ -8,10 +8,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst && f && del)
 	{
-		new = (t_list *)malloc(sizeof(t_list));
-		if (!new)
+		first = (t_list *)malloc(sizeof(t_list));
+		if (!first)
 			return (NULL);
-		first = new;
+		new = first;
 		pt = lst;
 		while (pt)
 		{
@@ -32,23 +32,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (NULL);
 }
-void	*multiply_by_two(void *data)
-{
-	int	*value;
-	int	*result;
+// void	*multiply_by_two(void *data)
+// {
+// 	int	*value;
+// 	int	*result;
 
-	value = (int *)data;
-	result = (int *)malloc(sizeof(int));
-	if (!result)
-		return (NULL);
-	*result = (*value) * 2;
-	return (result);
-}
+// 	value = (int *)data;
+// 	result = (int *)malloc(sizeof(int));
+// 	if (!result)
+// 		return (NULL);
+// 	*result = (*value) * 2;
+// 	return (result);
+// }
 
-void	free_data(void *data)
-{
-	free(data);
-}
+// void	free_data(void *data)
+// {
+// 	free(data);
+// }
 
 // int main()
 // {

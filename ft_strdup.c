@@ -8,10 +8,6 @@ char	*ft_strdup(char *src)
 
 	j = 0;
 	i = 0;
-	if (src == NULL)
-	{
-		return (NULL);
-	}
 	while (src[i] != '\0')
 	{
 		i++;
