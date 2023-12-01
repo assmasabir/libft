@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:17:06 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:17:07 by asabir           ###   ########.fr       */
+/*   Updated: 2023/11/29 14:51:35 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s)

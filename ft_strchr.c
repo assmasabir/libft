@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:17:29 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:17:30 by asabir           ###   ########.fr       */
+/*   Updated: 2023/11/29 15:01:13 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	// if (c == '\0')
-	// {
-	// 	while (s[i] != '\0')
-	// 	{
-	// 		i++;
-	// 	}
-	// 	return (char *)(s + i);
-	// }
-
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] == (char)c)

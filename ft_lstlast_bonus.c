@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:16:12 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:16:13 by asabir           ###   ########.fr       */
+/*   Updated: 2023/11/29 14:46:57 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

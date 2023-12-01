@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:16:03 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:16:04 by asabir           ###   ########.fr       */
+/*   Updated: 2023/11/29 14:46:11 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

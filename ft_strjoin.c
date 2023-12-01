@@ -3,32 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:17:42 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:17:43 by asabir           ###   ########.fr       */
+/*   Updated: 2023/12/01 11:48:12 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*allocate(char const *s1, char const *s2)
 {
 	int		len;
+	char	*res;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	res = (char *)malloc((len + 1) * sizeof(char));
+	return (res);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
 	char	*res;
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
-	res = (char *)malloc((len + 1) * sizeof(char));
+	res = allocate(s1, s2);
 	if (!res)
-	{
 		return (NULL);
-	}
 	while (s1[j] != '\0')
 	{
 		res[i] = s1[j];

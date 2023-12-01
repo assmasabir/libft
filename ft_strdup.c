@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:17:33 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:17:34 by asabir           ###   ########.fr       */
+/*   Updated: 2023/12/01 01:30:04 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(char const *src)
 {
-	int i;
-	int j;
-	char *dest;
+	int		i;
+	int		j;
+	char	*dest;
 
 	j = 0;
 	i = 0;

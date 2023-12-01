@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:14:32 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:14:33 by asabir           ###   ########.fr       */
+/*   Updated: 2023/12/01 14:02:21 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,31 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-		t_list *new;
-		t_list *first;
-		t_list *pt;
+	t_list	*new;
+	t_list	*first;
+	void	*pt;
 
 	if (lst && f && del)
 	{
-		first = (t_list *)malloc(sizeof(t_list));
-		if (!first)
-			return (NULL);
-		new = first;
-		pt = lst;
-		while (pt)
+		first = NULL;
+		while (lst)
 		{
-			new->content = f(pt->content);
-			pt = pt->next;
-			if (!pt)
-			return(first);
-			new->next = (t_list *)malloc(sizeof(t_list));
-			if (!new->next)
+			pt = f(lst->content);
+			new = ft_lstnew(pt);
+			if (!new)
 			{
+				del(pt);
 				ft_lstclear(&first, del);
 				return (NULL);
 			}
-			new = new->next;
+			ft_lstadd_back(&first, new);
+			lst = lst->next;
 		}
-		new->next = NULL;
 		return (first);
 	}
 	return (NULL);
 }
+// #include<stdio.h>
 // void	*multiply_by_two(void *data)
 // {
 // 	int	*value;
@@ -66,8 +61,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {
 
 //     t_list *lst = (t_list *)malloc(sizeof(t_list));
+// 	t_list *lst2 = (t_list *)malloc(sizeof(t_list));
 //     lst->content = (void *)malloc(sizeof(int));
+// 	lst2->content = (void *)malloc(sizeof(int));
 //     *((int *)(lst->content)) = 5;
+//     lst->next = lst2;
+// 	*((int *)(lst->content)) = 9;
 //     lst->next = NULL;
 
 //     t_list *new_lst = ft_lstmap(lst, multiply_by_two, free_data);

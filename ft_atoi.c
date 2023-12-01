@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:14:52 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:14:53 by asabir           ###   ########.fr       */
+/*   Updated: 2023/11/30 10:05:57 by techwhimsy       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	i;
-	int	sign;
+	long	res;
+	int		i;
+	int		sign;
 
 	res = 0;
 	i = 0;
@@ -38,3 +37,9 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
+// #include<stdio.h>
+// #include<string.h>
+// int main()
+// {
+// 	printf("%d",ft_atoi("-2147483648"));
+// }
