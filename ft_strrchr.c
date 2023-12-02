@@ -6,7 +6,7 @@
 /*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:18:17 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/28 23:18:18 by asabir           ###   ########.fr       */
+/*   Updated: 2023/12/02 11:41:00 by asabir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
 
-	len = ft_strlen((char *)s);
+	len = ft_strlen(s);
 	while (len >= 0)
 	{
 		if (s[len] == (char)c)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:18:25 by asabir            #+#    #+#             */
-/*   Updated: 2023/12/01 18:04:58 by techwhimsy       ###   ########.fr       */
+/*   Updated: 2023/12/02 11:41:20 by asabir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (set == NULL)
 		return (ft_strdup(s1));
 	i = 0;
-	j = ft_strlen(s1) - 1;
+	j = ft_strlen((const char *)s1) - 1;
 	while (s1[i] != '\0' && search(s1[i], set))
 		i++;
 	while (j >= 0 && search(s1[j], set))

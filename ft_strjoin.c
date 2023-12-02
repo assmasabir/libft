@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:17:42 by asabir            #+#    #+#             */
-/*   Updated: 2023/12/01 11:48:12 by techwhimsy       ###   ########.fr       */
+/*   Updated: 2023/12/02 11:38:22 by asabir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*allocate(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	len = ft_strlen((const char *)s1) + ft_strlen((const char *)s2);
 	res = (char *)malloc((len + 1) * sizeof(char));
 	return (res);
 }

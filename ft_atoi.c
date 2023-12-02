@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: techwhimsy <techwhimsy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: asabir <asabir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:14:52 by asabir            #+#    #+#             */
-/*   Updated: 2023/11/30 10:05:57 by techwhimsy       ###   ########.fr       */
+/*   Updated: 2023/12/02 11:26:30 by asabir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-// #include<stdio.h>
-// #include<string.h>
-// int main()
-// {
-// 	printf("%d",ft_atoi("-2147483648"));
-// }
