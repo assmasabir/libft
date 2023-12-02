@@ -32,12 +32,13 @@ OBJS1 = $(SRCS1:.c=.o)
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-        cc $(CFLAGS) -c $(OBJS)
-        ar rc $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 bonus: $(OBJS1)
-        cc $(CFLAGS) -c $(OBJS1)
-        ar rc $(NAME) $(OBJS1)
+
+$(OBJS1) : $(SRCS1)
+	$(CC) $(CFLAGS) -c $(SRCS1)
+	ar rc $(NAME) $(OBJS1)
 clean:
 	rm -f $(OBJS) $(OBJS1)
 
